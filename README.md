@@ -18,7 +18,8 @@ docker run -it --rm \
   --user $(id -u):$(id -g) \
   --volume /host/queue:/packageQueue \
   --volume /host/builtPackages:/build \
-  --volume /host/satis.json:/satis.json
+  --volume /host/satis.json:/satis.json \
+  freshleafmedia/satis-build-worker
 ```
 
 If you also want to take advantage of Composers caching (you do) then you can also add `--volume /host/composer:/composer`
