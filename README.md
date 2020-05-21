@@ -26,8 +26,8 @@ If you also want to take advantage of Composers caching (you do) then you can al
 
 ### Adding to the queue
 
-- Each job in the queue file must contain only the URL to the repo to build, eg `git@github.com:vendor/package.git` or `git@bitbucket.org:vendor/package.git`.
-- The filename can be set to anything you like, it isn't read.
+- Each file in the queue must contain only the URL of the package to be built, eg `git@github.com:vendor/package.git` or `git@bitbucket.org:vendor/package.git`.
+- The filename can be set to anything you like, it isn't used.
 - The jobs are processed in the order they are added
 
 
