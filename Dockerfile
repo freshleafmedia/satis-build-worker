@@ -1,5 +1,5 @@
 FROM composer/satis
 
-COPY entrypoint.sh /usr/local/bin/
+COPY entrypoint.sh /
 
-CMD ["entrypoint.sh"]
+CMD ["/entrypoint.sh"]
