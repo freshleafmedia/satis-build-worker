@@ -6,7 +6,7 @@ A Satis instance that will build packages from a queue.
 
 - The queue is simply a directory
 - Every file in the queue is a job
-- The file contains details of the package to be built
+- The file contains the repository URL of the package to be built
 
 ## Example
 
@@ -23,6 +23,13 @@ docker run -it --rm \
 ```
 
 If you also want to take advantage of Composers caching (you do) then you can also add `--volume /host/composer:/composer`
+
+### Adding to the queue
+
+- Each job in the queue file must contain only the URL to the repo to build, eg `git@github.com:vendor/package.git` or `git@bitbucket.org:vendor/package.git`.
+- The filename can be set to anything you like, it isn't read.
+- The jobs are processed in the order they are added
+
 
 ## Kubernetes Deployment
 
